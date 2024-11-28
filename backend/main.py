@@ -25,8 +25,8 @@ async def read_item(lat: float, lon: float, response: Response):
 
    
        # Query max wave height since 1950 (full dataset time range)
-        all_max_wave_global = wave_data_global.max(dim='time', skipna=True)
-        nearest_global_data = all_max_wave_global.sel(latitude=lat, longitude=lon, method="nearest").values
+        all_max_wave_global = wave_data_global.sel(latitude=lat, longitude=lon, method="nearest")
+        nearest_global_data = all_max_wave_global.max().values
         if math.isnan(nearest_global_data):
             max_wave_since_1950_return_value="No Valid Value Available for this position"
         else:    
