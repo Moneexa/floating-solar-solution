@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import { APIProvider } from "@vis.gl/react-google-maps";
 import { DataProvider } from "./store/data";
-const apiKey = "AIzaSyD8FiHTNTwn2UZKLHJOcLKFS31trKggVQ8";
+const apiKey = "AIzaSyCmhwxgkFS_R3sOr4LhiRDa8aIBGWd6vRM";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
